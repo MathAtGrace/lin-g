@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span>
+</h4>
+<p>The previous activity also shows that questions about linear combinations lead naturally to linear systems.  Suppose we have vectors <span class="process-math">\(\vvec = \twovec3{-1}\)</span> and <span class="process-math">\(\wvec=\twovec43\text{.}\)</span>  Let's determine whether we can describe the vector <span class="process-math">\(\bvec=\twovec{-11}{-18}\)</span> as a linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span>  In other words, we would like to know whether there are weights <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c\vvec + d\wvec= \bvec.
+\end{equation*}
+</div> <p>This leads to the equations</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+c\twovec3{-1} + d\twovec43
+\amp =
+\twovec{-11}{-18}    \\ \\
+\twovec{3c}{-c} + \twovec{4d}{3d}
+\amp =
+\twovec{-11}{-18}    \\ \\
+\twovec{3c+4d}{-c+3d}
+\amp =
+\twovec{-11}{-18}    \\ \\
+\end{aligned}
+\end{equation*}
+</div> <p>Equating the components of the vectors on each side of the equation, we arrive at the linear system</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{alignedat}{3}
+3a \amp {}+{} \amp 4b \amp {}={} \amp -11 \\
+-a \amp {}+{} \amp 3b \amp {}={} \amp -18 \
+\end{alignedat}
+\end{equation*}
+</div>
+<p class="continuation">This means that <span class="process-math">\(\bvec\)</span> is a linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\)</span> if this linear system is consistent.</p> <p>To solve this linear system, we construct its corresponding augmented matrix and find its reduced row echelon form,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left[
+\begin{array}{rr|r}
+3 \amp 4 \amp -11 \\
+-1 \amp 3 \amp -18
+\end{array}
+\right]
+\sim
+\left[
+\begin{array}{rr|r}
+1 \amp 0 \amp 3 \\
+0 \amp 1 \amp -5
+\end{array}
+\right],
+\end{equation*}
+</div>
+<p class="continuation">giving us the weights <span class="process-math">\(c=3\)</span> and <span class="process-math">\(d=-5\text{;}\)</span>  that is,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3\vvec -5 \wvec = \bvec\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In fact, we know more because the reduced row echelon matrix tells us that these are the only possible weights.  Therefore, <span class="process-math">\(\bvec\)</span> may be expressed as a linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\)</span> in exactly one way.</p></article><span class="incontext"><a href="sec-vectors-lin-combs.html#example-3" class="internal">in-context</a></span>
+</body>
+</html>
