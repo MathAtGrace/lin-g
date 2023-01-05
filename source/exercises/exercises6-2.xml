@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that <m>W</m> is a subspace of <m>\real^4</m> with
+	basis 
+	<me>
+	  \wvec_1=\fourvec{-2}22{-4},\hspace{24pt}
+	  \wvec_2=\fourvec{-2}35{-5}.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      What are the dimensions <m>\dim W</m> and <m>\dim
+	      W^\perp</m>?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find a basis for <m>W^\perp</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Verify that each of the basis vectors for <m>W^\perp</m>
+	      are orthogonal to <m>\wvec_1</m> and <m>\wvec_2</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\dim W = 2</m> and <m>\dim W^\perp = 4-2 = 2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\vvec_1 = \fourvec{-2}{-3}10</m> and
+	      <m>\vvec_2=\fourvec{-1}101</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Verify that <m>\wvec_i\cdot\vvec_j = 0</m> for all
+	      <m>i</m> and <m>j</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\dim W = 2</m> and <m>\dim W^\perp = 2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\vvec_1 = \fourvec{-2}{-3}10</m> and
+	      <m>\vvec_2=\fourvec{-1}101</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Use the dot product.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	      
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the matrix
+	<m> A = \begin{bmatrix}
+	-1 \amp -2 \amp -2 \\
+	1 \amp 3 \amp 4 \\
+	2 \amp 1 \amp -2 
+	\end{bmatrix}</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find <m>\rank(A)</m> and a basis for <m>\col(A)</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Determine the dimension of <m>\col(A)^\perp</m> and find
+	      a basis for it.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A\sim\begin{bmatrix}
+	      1 \amp 0 \amp -2 \\
+	      0 \amp 1 \amp 2 \\
+	      0 \amp 0 \amp 0
+	      \end{bmatrix}
+	      </m> so <m>\rank(A) = 2</m> since there are two pivot
+	      positions. 
+	      The reduced row echelon form shows that the third column
+	      is a linear combination of the first two so
+	      <m>\threevec{-1}12</m> and <m>\threevec{-2}31</m> form a
+	      basis for <m>\col(A)</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We know that <m>\dim \col(A)^\perp = 3 - 2 = 1</m>.  To
+	      find a basis, solve the equation <m>A^T\xvec =
+	      \zerovec</m> to obtain <m>\threevec531</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\rank(A) = 2</m> and a basis for <m>\col(A)</m> is
+	      <m>\threevec{-1}12</m> and <m>\threevec{-2}31</m> 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\dim\col(A)^\perp = 1</m> with basis
+	      <m>\threevec531</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that <m>W</m> is the subspace of <m>\real^4</m> defined
+	as the solution set of the equation
+	<me>
+	  x_1 - 3x_2 + 5x_3 - 2x_4 = 0.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      What are the dimensions <m>\dim W</m> and <m>\dim
+	      W^\perp</m>? 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find a basis for <m>W</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find a basis for <m>W^\perp</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      In general, how can you easily find a basis for
+	      <m>W^\perp</m> when <m>W</m> is defined by
+	      <me>
+		Ax_1+Bx_2+Cx_3+Dx_4 = 0?
+	      </me>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>W = \nul(B)</m> where <m>B = \begin{bmatrix}1 \amp -3
+	      \amp 5 \amp -2 \end{bmatrix}</m> so <m>\dim W = 4 -1
+	      =3</m>.  Therefore, <m>\dim W^\perp = 4-3 = 1</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      A basis for <m>W</m> is <m>\fourvec3100</m>,
+	      <m>\fourvec{-5}010</m>, and <m>\fourvec2001</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Since every vector in <m>W</m> satisfies
+	      <m>\fourvec1{-3}5{-2}\cdot\xvec = 0</m>, a basis for
+	      <m>W^\perp</m> is <m>\fourvec1{-3}5{-2}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\fourvec ABCD</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\dim W = 3</m>, <m>\dim W^\perp = 1</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\fourvec3100</m>,
+	      <m>\fourvec{-5}010</m>, and <m>\fourvec2001</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\fourvec1{-3}5{-2}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\fourvec ABCD</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	     
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Determine whether the following statements are true or false
+	and explain your reasoning.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If
+	      <m>A=\begin{bmatrix}
+	      2 \amp 1 \\
+	      1 \amp 1 \\
+	      -3 \amp 1
+	      \end{bmatrix}</m>, then <m>\xvec=\threevec{4}{-5}1</m>
+	      is in <m>\col(A)^\perp</m>.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      If <m>A</m> is a <m>2\times3</m> matrix and <m>B</m> is
+	      a <m>3\times4</m> matrix, then
+	      <m>(AB)^T = A^TB^T</m> is a <m>4\times2</m> matrix.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      If the columns of <m>A</m> are <m>\vvec_1</m>,
+	      <m>\vvec_2</m>, and <m>\vvec_3</m> and <m>A^T\xvec =
+	      \threevec{2}01</m>, then <m>\xvec</m> is orthogonal to
+	      <m>\vvec_2</m>.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      If <m>A</m> is a <m>4\times 4</m> matrix with
+	      <m>\rank(A) = 3</m>, then <m>\col(A)^\perp</m> is a line
+	      in <m>\real^4</m>.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      If <m>A</m> is a <m>5\times 7</m> matrix with
+	      <m>\rank(A) = 5</m>, then <m>\rank(A^T) = 7</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      True, since <m>A^T\xvec=\zerovec</m>, <m>\xvec</m> is in
+	      <m>\col(A)^\perp</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False, <m>(AB)^T</m> is a <m>4\times2</m> matrix, but it
+	      is given by <m>(AB)^T=B^TA^T</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True, because the second component of <m>A^T\xvec =
+	      \vvec_2\cdot\xvec=0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True, because <m>\dim\col(A)^\perp = 4-\dim\col(A) =
+	      4-3 = 1</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False, <m>\rank(A^T) = \rank(A) = 5</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	      
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Apply properties of matrix operations to simplify the
+	following expressions.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m> A^T(BA^T)^{-1} </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m> (A+B)^T(A+B) </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m> [A(A+B)^T]^T </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m> (A + 2I)^T </m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A^T(A^T)^{-1}B^{-1} = B^{-1}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^TA + B^TA + A^TB + B^TB</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>(A+B)A^T = AA^T+BA^T</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^T+2I</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>B^{-1}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^TA + B^TA + A^TB + B^TB</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>AA^T+BA^T</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^T+2I</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	A symmetric matrix <m>A</m> is one for which <m>A=A^T</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Explain why a symmetric matrix must be square.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>A</m> and <m>B</m> are general matrices and
+	      <m>D</m> is a square diagonal matrix, which of the
+	      following matrices can you guarantee are symmetric?
+	      <ol marker="1.">
+		<li>
+		  <p>
+		    <m>D</m>
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    <m> BAB^{-1} </m>
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    <m> AA^T</m>.
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    <m> BDB^T</m>
+		  </p>
+		</li>
+	      </ol>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If <m>A</m> is an <m>m\times n</m> matrix, then
+	      <m>A^T</m> is <m>n\times m</m>  If these matrices are
+	      the same, then <m>m=n</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <ol marker="1.">
+		<li>
+		  <p>
+		    If <m>D</m> is diagonal, then <m>D^T = D</m>.
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    <m>(BAB^{-1})^T = (B^{-1})^TA^TB^T</m> so this
+		    matrix need not be symmetric.
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    <m>(AA^T)^T = (A^T)^TA^T = AA^T</m> so this matrix
+		    is symmetric.
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    <m>(BDB^T)^T = (B^T)^TD^TB^T = BDB^T</m> so this
+		    matrix is symmetric.
+		  </p>
+		</li>
+	      </ol>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      They must have the same number of rows and columns.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <ol marker="1.">
+		<li>
+		  <p>
+		    Yes
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    No
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    No
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    Yes
+		  </p>
+		</li>
+	      </ol>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	      
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	If <m>A</m> is a square matrix, remember that the
+	characteristic polynomial of <m>A</m> is <m>\det(A-\lambda
+	I)</m> and that the roots of the characteristic polynomial are
+	the eigenvalues of <m>A</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Explain why <m>A</m> and <m>A^T</m> have the same
+	      characteristic polynomial.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Explain why <m>A</m> and <m>A^T</m> have the same set of 
+	      eigenvalues.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Suppose that <m>A</m> is diagonalizable with
+	      diagonalization <m>A=PDP^{-1}</m>.  Explain why
+	      <m>A^T</m> is diagonalizable and find a diagonalization. 
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>(A-\lambda I)^T = A^T - \lambda I</m> and therefore
+	      <m>\det(A^T-\lambda I) = \det[(A-\lambda I)^T] =
+	      \det(A-\lambda I)</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The eigenvalues of a matrix are given by the roots of
+	      its characteristic polynomial.  Since <m>A</m> and
+	      <m>A^T</m> have the same characteristic polynomial, they
+	      have the same eigenvalues.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^T = (PDP^{-1})^T = (P^T)^{-1} D P^T</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Use properties of the matrix transpose.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Because they have the same characteristic polynomial.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^T = (P^T)^{-1} D P^T</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+    
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	This exercise introduces a version of the Pythagorean theorem
+	that we'll use later.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Suppose that <m>\vvec</m> and <m>\wvec</m> are
+	      orthogonal to one another.  Use the dot product to
+	      explain why 
+	      <me>
+		\len{\vvec+\wvec}^2 = \len{\vvec}^2 + \len{\wvec}^2.
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Suppose that <m>W</m> is a subspace of <m>\real^m</m>
+	      and that <m>\zvec</m> is a vector in <m>\real^m</m> for
+	      which
+	      <me>\zvec = \xvec + \yvec,</me>
+	      where <m>\xvec</m>
+	      is in <m>W</m> and <m>\yvec</m> is in <m>W^\perp</m>.
+	      Explain why
+	      <me>
+		\len{\zvec}^2 = \len{\xvec}^2 + \len{\yvec}^2,
+	      </me>
+	      which is an expression of the Pythagorean theorem.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\len{\vvec+\wvec}^2 = (\vvec+\wvec)\cdot(\vvec+\wvec)
+	      = \vvec\cdot\vvec+2\vvec\cdot\wvec+\wvec\cdot\wvec
+	      = \vvec\cdot\vvec+\wvec\cdot\wvec</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Because <m>\xvec</m> and <m>\yvec</m> are orthogonal.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\len{\vvec+\wvec}^2 
+	      = \vvec\cdot\vvec+\wvec\cdot\wvec</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Because <m>\xvec</m> and <m>\yvec</m> are orthogonal.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	In the next chapter, symmetric matrices---that is, matrices for
+	which <m>A=A^T</m>---play an important role.  It turns out that
+	eigenvectors of a symmetric matrix that are associated to
+	different eigenvalues are orthogonal.  We will explain this
+	fact in this exercise.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Viewing a vector as a matrix having one column, we may
+	      write <m>\xvec\cdot\yvec = 
+	      \xvec^T\yvec</m>.
+	      If <m>A</m> is a matrix,
+	      explain why <m>\xvec\cdot (A\yvec) = (A^T\xvec) \cdot
+	      \yvec</m>. 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We have seen that the matrix
+	      <m>A=\begin{bmatrix}
+	      1 \amp 2 \\
+	      2 \amp 1 
+	      \end{bmatrix}
+	      </m> has eigenvectors <m>\vvec_1=\twovec11</m>, with
+	      associated eigenvalue <m>\lambda_1=3</m>, and <m>\vvec_2
+	      = \twovec{1}{-1}</m>, with associated eigenvalue
+	      <m>\lambda_2 = -1</m>.  Verify that <m>A</m> is
+	      symmetric and that <m>\vvec_1</m> and
+	      <m>\vvec_2</m> are orthogonal.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Suppose that <m>A</m> is a general symmetric matrix and
+	      that <m>\vvec_1</m> is an eigenvector associated to
+	      eigenvalue <m>\lambda_1</m> and that <m>\vvec_2</m> is
+	      an eigenvector associated to a different eigenvalue
+	      <m>\lambda_2</m>.  Beginning with <m>\vvec_1\cdot
+	      (A\vvec_2)</m>, apply the identity from the first part
+	      of this exercise to explain why <m>\vvec_1</m> and
+	      <m>\vvec_2</m> are orthogonal.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+	      
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\xvec\cdot(A\yvec) = \xvec^TA\yvec =
+	      (A^T\xvec)^T\yvec = (A^T\xvec)\cdot\yvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^T = A</m> and <m>\vvec_1\cdot\vvec_2=0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <md>
+		<mrow>
+		  \vvec_1\cdot(A\vvec_2) \amp {}={}
+		  (A\vvec_1)\cdot\vvec_2
+		</mrow>
+		<mrow>
+		  \lambda_2\vvec_1\cdot\vvec_2 \amp {}={}
+		  \lambda_1\vvec_1\cdot\vvec_2
+		</mrow>
+		<mrow>
+		  (\lambda_1-\lambda_2)\vvec_1\cdot\vvec_2\amp{}={} 0
+		</mrow>
+	      </md>
+	      so <m>\vvec_1\cdot\vvec_2=0</m> since
+	      <m>\lambda_1-\lambda_2\neq 0</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Use properties of the transpose.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Compute the dot product of <m>\vvec_1</m> and
+	      <m>\vvec_2</m>. 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      It follows that
+	      <m>(\lambda_1-\lambda_2)\vvec_1\cdot\vvec_2 = 0</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	      
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Given an <m>m\times n</m> matrix <m>A</m>, the <em>row
+	space</em> of <m>A</m> is the column space of <m>A^T</m>;
+	that is, <m>\row(A) = \col(A^T)</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Suppose that <m>A</m> is a <m>7\times 15</m> matrix.
+	      For what <m>p</m> is <m>\row(A)</m> a subspace of
+	      <m>\real^p</m>?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      How can <xref ref="prop-col-orthog" /> help us describe 
+	      <m>\row(A)^\perp</m>? 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Suppose that
+	      <m>A = \begin{bmatrix}
+	      -1 \amp -2 \amp 2 \amp 1 \\
+	      2 \amp 4 \amp -1 \amp 5 \\
+	      1 \amp 2 \amp 0 \amp 3
+	      \end{bmatrix}</m>.  Find bases for <m>\row(A)</m> and
+	      <m>\row(A)^\perp</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Since <m>A^T</m> is <m>15\times7</m>, it follows that
+	      <m>\row(A)=\col(A^T)</m> is a subspace of <m>\real^{15}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\row(A)^\perp = \col(A^T)^\perp = \nul((A^T)^T) =
+	      \nul(A)</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\rank(A) = 3</m> so <m>\rank(A^T)=\dim\col(A^T) =
+	      \dim\row(A) = 3</m>.  A basis for <m>\row(A)</m> are the
+	      three rows of <m>A</m>.  <m>\row(A)^\perp = \nul(A)</m> is
+	      one-dimensional with basis <m>\fourvec{-2}100</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>p=15</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\row(A)^\perp = \
+	      \nul(A)</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      A basis for <m>\row(A)</m> are the
+	      three rows of <m>A</m>.  A basis for <m>\row(A)^\perp =
+	      \nul(A)</m> is <m>\fourvec{-2}100</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+
+  </exercise>
+
+</exercises>

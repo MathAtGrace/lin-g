@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that
+	<m>A = \begin{bmatrix} 4 \amp 2 \\ 2 \amp 7 \end{bmatrix}</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find an orthogonal diagonalization of <m>A</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Evaluate the quadratic form
+	      <m>q_A\left(\twovec11\right)</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the unit vector <m>\uvec</m> for which
+	      <m>q_A(\uvec)</m> is as large as 
+	      possible.  What is the value of <m>q_A(\uvec)</m> in
+	      this direction?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the unit vector <m>\uvec</m> for which
+	      <m>q_A(\uvec)</m> is as small as 
+	      possible.  What is the value of <m>q_A(\uvec)</m> in
+	      this direction?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A = QDQ^T</m> where
+	      <me>
+		D=\begin{bmatrix}
+		8 \amp 0 \\
+		0 \amp 3 \\
+		\end{bmatrix},\hspace{24pt}
+		Q=\begin{bmatrix}
+		1/\sqrt{5} \amp 2/\sqrt{5} \\
+		2/\sqrt{5} \amp -1/\sqrt{5} \\
+		\end{bmatrix}\text{.}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>q_A\left(\twovec11\right) =
+	      \twovec11\cdot\left(A\twovec11\right) = 15</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>8</m> in the direction
+	      <m>\twovec{1/\sqrt{5}}{2/\sqrt{5}}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The minimum value is <m>3</m> in the direction
+	      <m>\twovec{2/\sqrt{5}}{-1/\sqrt{5}}</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+	  
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A = QDQ^T</m> where
+	      <me>
+		D=\begin{bmatrix}
+		8 \amp 0 \\
+		0 \amp 3 \\
+		\end{bmatrix},\hspace{24pt}
+		Q=\begin{bmatrix}
+		1/\sqrt{5} \amp 2/\sqrt{5} \\
+		2/\sqrt{5} \amp -1/\sqrt{5} \\
+		\end{bmatrix}\text{.}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>15</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>8</m> in the direction
+	      <m>\twovec{1/\sqrt{5}}{2/\sqrt{5}}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The minimum value is <m>3</m> in the direction
+	      <m>\twovec{2/\sqrt{5}}{-1/\sqrt{5}}</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	  
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the quadratic form
+	<me>
+	  q\left(\twovec{x_1}{x_2}\right) =
+	  3x_1^2 - 4x_1x_2 + 6x_2^2.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find a matrix <m>A</m> such that <m>q(\xvec) =
+	      \xvec^TA\xvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the maximum and minimum values of <m>q(\uvec)</m>
+	      among all unit vectors <m>\uvec</m> and describe the
+	      directions in which they occur.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A = \begin{bmatrix}
+	      3 \amp -2 \\
+	      -2 \amp 6 \\
+	      \end{bmatrix} </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>7</m> in the direction
+	      <m>\twovec{1/\sqrt{5}}{-2/\sqrt{5}}</m>.
+	      The minimum value is <m>2</m> in the direction
+	      <m>\twovec{2/\sqrt{5}}{1/\sqrt{5}}</m>.
+	    </p>
+	  </li>	      
+	</ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A = \begin{bmatrix}
+	      3 \amp -2 \\
+	      -2 \amp 6 \\
+	      \end{bmatrix} </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>7</m> in the direction
+	      <m>\twovec{1/\sqrt{5}}{-2/\sqrt{5}}</m>.
+	      The minimum value is <m>2</m> in the direction
+	      <m>\twovec{2/\sqrt{5}}{1/\sqrt{5}}</m>.
+	    </p>
+	  </li>	      
+	</ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that <m>A</m> is a demeaned data matrix:
+	<me>
+	  A = \begin{bmatrix}
+	  1 \amp -2 \amp 0 \amp 1 \\
+	  1 \amp -1 \amp -1 \amp 1 \\
+	  \end{bmatrix}.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find the covariance matrix <m>C</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What is the variance of the data projected onto the line
+	      defined by <m>\uvec=\twovec{1/\sqrt{2}}{1/\sqrt{2}}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What is the total variance?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      In which direction is the variance greatest and what is the
+	      variance in this direction?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>C = \frac14 AA^T = \begin{bmatrix}
+	      3/2 \amp 1 \\
+	      1 \amp 1
+	      \end{bmatrix}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>V_{\uvec} = \uvec\cdot(C\uvec) = 9/4</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The total variance is <m>V_x+V_y = 3/2+1=5/2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The variance is greatest in the direction
+	      <m>\uvec=\twovec{0.79}{0.62}</m> where
+	      <m>V_{\uvec}=2.28</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\begin{bmatrix}
+	      3/2 \amp 1 \\
+	      1 \amp 1
+	      \end{bmatrix}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>9/4</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>5/2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      In the direction
+	      <m>\uvec=\twovec{0.79}{0.62}</m> where
+	      <m>V_{\uvec}=2.28</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the matrix
+	<m>
+	  A = \begin{bmatrix}
+	  4 \amp -3 \amp -3 \\
+	  -3 \amp 4 \amp -3 \\
+	  -3 \amp -3 \amp 4 \\
+	  \end{bmatrix}
+	</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find <m>Q</m> and <m>D</m> such that <m>A=QDQ^T</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the maximum and minimum values of <m>q(\uvec) =
+	      \xvec^TA\xvec</m> among all unit vectors <m>\uvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Describe the direction in which the minimum value occurs.
+	      What can you say about the direction in which the maximum
+	      occurs?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <me>
+		D = \begin{bmatrix}
+		7 \amp 0 \amp 0 \\
+		0 \amp 7 \amp 0 \\
+		0 \amp 0 \amp -2 \\
+		\end{bmatrix},\hspace{24pt}
+		Q = \begin{bmatrix}
+		1/\sqrt{2} \amp -1/\sqrt{6} \amp 1/\sqrt{3} \\
+		0 \amp 2/\sqrt{6} \amp 1/\sqrt{3} \\
+		-1/\sqrt{2} \amp -1/\sqrt{6} \amp 1/\sqrt{3} \\
+		\end{bmatrix}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum is 7 and the minimum is -2.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The minimum occurs in the direction of
+	      <m>\threevec{1/\sqrt{3}}{1/\sqrt{3}}{1/\sqrt{3}}</m>.
+	      The maximum occurs along a circle defined by 
+	      <m>c_1\uvec_1+c_2\uvec_2</m> where <m>c_1^2+c_2^2=1</m>
+	      and <m>\uvec_1</m> and <m>\uvec_2</m> are the first two
+	      columns of <m>Q</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+	
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <me>
+		D = \begin{bmatrix}
+		7 \amp 0 \amp 0 \\
+		0 \amp 7 \amp 0 \\
+		0 \amp 0 \amp -2 \\
+		\end{bmatrix},\hspace{24pt}
+		Q = \begin{bmatrix}
+		1/\sqrt{2} \amp -1/\sqrt{6} \amp 1/\sqrt{3} \\
+		0 \amp 2/\sqrt{6} \amp 1/\sqrt{3} \\
+		-1/\sqrt{2} \amp -1/\sqrt{6} \amp 1/\sqrt{3} \\
+		\end{bmatrix}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum is 7 and the minimum is -2.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The minimum occurs in the direction of
+	      <m>\threevec{1/\sqrt{3}}{1/\sqrt{3}}{1/\sqrt{3}}</m>.
+	      The maximum occurs along a circle defined by 
+	      <m>c_1\uvec_1+c_2\uvec_2</m> where <m>c_1^2+c_2^2=1</m>
+	      and <m>\uvec_1</m> and <m>\uvec_2</m> are the first two
+	      columns of <m>Q</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the matrix
+	<m>B = \begin{bmatrix} -2 \amp 1 \\ 4 \amp -2 \\ 2 \amp -1 \\
+	\end{bmatrix}</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find the matrix <m>A</m> so that
+	      <m>q\left(\twovec{x_1}{x_2}\right) = 
+	      \len{B\xvec}^2=q_A(\xvec)</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the maximum and minimum values of <m>q(\uvec)</m>
+	      among all unit vectors <m>\uvec</m>
+	      and describe the directions in which they occur.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What does the minimum value of <m>q(\uvec)</m> tell you
+	      about the matrix <m>B</m>?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>q(\xvec) = |B\xvec|^2 = (B\xvec)\cdot(B\xvec) =
+	      \xvec\cdot(B^TB\xvec)</m> so <m>A = B^TB=\begin{bmatrix}
+	      24 \amp -12 \\
+	      -12 \amp 6 \\
+	      \end{bmatrix}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>30</m> in the direction
+	      <m>\twovec{2/\sqrt{5}}{-1/\sqrt{5}}</m> and the minimum
+	      value is <m>0</m> in the direction 
+	      <m>\twovec{1/\sqrt{5}}{2/\sqrt{5}}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The minimum value of <m>0</m> says there is a vector
+	      such that <m>q(\uvec) = |B\uvec|^2 = 0</m>, which means
+	      that <m>B\uvec=0</m>.  So there is a nonzero vector that
+	      is a solution to the homogeneous equations, which
+	      implies that the columns of <m>B</m> are linearly
+	      dependent.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A = B^TB=\begin{bmatrix}
+	      24 \amp -12 \\
+	      -12 \amp 6 \\
+	      \end{bmatrix}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>30</m> in the direction
+	      <m>\twovec{2/\sqrt{5}}{-1/\sqrt{5}}</m> and the minimum
+	      value is <m>0</m> in the direction 
+	      <m>\twovec{1/\sqrt{5}}{2/\sqrt{5}}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The columns of <m>B</m> are linearly
+	      dependent.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the quadratic form
+	<me>
+	  q\left(\threevec{x_1}{x_2}{x_3}\right) =
+	  7x_1^2 + 4x_2^2 + 7x_3^2 - 2x_1x_2 -4x_1x_3-2x_2x_3.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      What can you say about the definiteness of the matrix
+	      <m>A</m> that defines the quadratic form?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find a matrix <m>Q</m> so that the change of coordinates
+	      <m>\yvec = Q^T\xvec</m> transforms the quadratic form
+	      into one that has no cross terms.  Write the quadratic
+	      form in terms of <m>\yvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What are the maximum and minimum values for
+	      <m>q(\uvec)</m> among all unit vectors <m>\uvec</m>?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The matrix
+	      <m>A = \begin{bmatrix}
+	      7 \amp -1 \amp -2 \\
+	      -1 \amp 4 \amp -1 \\
+	      -2 \amp -1 \amp 7
+	      \end{bmatrix}</m> has eigenvalues <m>3</m>, <m>6</m>,
+	      and <m>9</m> so <m>A</m> is positive definite.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>Q=\begin{bmatrix}
+	      1/\sqrt{2} \amp 1/\sqrt{3} \amp 1/\sqrt{6} \\
+	      0 \amp -1/\sqrt{3} \amp 2/\sqrt{6} \\
+	      -1/\sqrt{2} \amp 1/\sqrt{3} \amp 1/\sqrt{6} \\
+	      \end{bmatrix}
+	      </m>.  If <m>\yvec=Q^T\xvec</m>, then <me>
+	      q_A(\xvec) = 9y_1^2 + 6y_2^2 + 3y_3^2\text{.}
+	    </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>9</m> and the minimum value is
+	      <m>3</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>A</m> is positive definite.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>Q=\begin{bmatrix}
+	      1/\sqrt{2} \amp 1/\sqrt{3} \amp 1/\sqrt{6} \\
+	      0 \amp -1/\sqrt{3} \amp 2/\sqrt{6} \\
+	      -1/\sqrt{2} \amp 1/\sqrt{3} \amp 1/\sqrt{6} \\
+	      \end{bmatrix}
+	      </m> and <m>
+	      q_A(\xvec) = 9y_1^2 + 6y_2^2 + 3y_3^2</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The maximum value is <m>9</m> and the minimum value is
+	      <m>3</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Explain why the following statements are true.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Given any matrix <m>B</m>, the matrix <m>B^TB</m> is a
+	      symmetric, positive semidefinite matrix.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If both <m>A</m> and <m>B</m> are symmetric, positive
+	      definite matrices, explain why <m>A+B</m> is a
+	      symmetric, positive definite matrix.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>A</m> is a symmetric, invertible, positive
+	      definite matrix, 
+	      then <m>A^{-1}</m> is also.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The matrix is symmetric because <m>(B^TB)^T = B^T(B^T)^T
+	      = B^TB</m>.  If <m>\uvec</m> is an eigenvector having
+	      unit length, then <m>q(\uvec) = \uvec\cdot(B^TB\uvec) =
+	      \lambda</m> and <m>q(\uvec) = \uvec\cdot(B^TB\uvec) =
+	      (B\uvec)\cdot(B\uvec) = |B\uvec|^2 = \lambda \geq 0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\xvec</m> is a nonzero vector, then
+	      <m>q_{A+B}(\xvec) = \xvec\cdot((A+B)\xvec) =
+	      \xvec\cdot(A\xvec) + \xvec\cdot(B\xvec) = q_A(\xvec) +
+	      q_B(\xvec) \gt 0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      In this case, we know that the eigenvalues of <m>A</m>
+	      are all positive.  If <m>\lambda</m> is an eigenvalue of
+	      <m>A</m>, then <m>1/\lambda</m> is an eigenvalue of
+	      <m>A^{-1}</m> so <m>A^{-1}</m> is also positive definite.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>q(\uvec) = 
+	      |B\uvec|^2 = \lambda \geq 0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>q_{A+B}(\xvec) 
+	      = q_A(\xvec) +
+	      q_B(\xvec) \gt 0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The eigenvalues of <m>A^{-1}</m> are the reciprocals of
+	      the eigenvalues of <m>A</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+    
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Determine whether the following statements are true or false
+	and explain your reasoning.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If <m>A</m> is an indefinite matrix, we can't know
+	      whether it is positive definite or not.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If the smallest eigenvalue of <m>A</m> is 3, then
+	      <m>A</m> is positive definite.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>C</m> is the covariance matrix associated with a
+	      data set, then <m>C</m> is positive semidefinite.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>A</m> is a symmetric <m>2\times2</m> matrix and
+	      the maximum and minimum values of <m>q_A(\uvec)</m>
+	      occur at <m>\twovec10</m> and <m>\twovec01</m>, then
+	      <m>A</m> is diagonal.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>A</m> is negative definite and <m>Q</m> is an
+	      orthogonal matrix with <m>B = QAQ^T</m>, then <m>B</m>
+	      is negative definite.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      False.  We know that it is neither positive nor negative
+	      definite.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True.  This implies that <m>q_A(\uvec) \geq 3</m> for
+	      all unit vectors <m>\uvec</m>.  Then for any other
+	      vector <m>q_A(\xvec) =q_A(|\xvec|\uvec)= |\xvec|^2
+	      q_A(\uvec) \gt 0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True.  If <m>\lambda</m> is an eigenvalue with associated
+	      unit eigenvector <m>\uvec</m>, then
+	      <me>
+		q_C(\uvec) = \uvec\cdot(C\uvec) =
+		\frac1N\uvec\cdot(AA^T\uvec) =
+		\frac1N(A^T\uvec)\cdot(A^T\uvec) = \frac1N|A^T\uvec|^2
+		\geq 0\text{.}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True.  The matrix <m>Q=\begin{bmatrix} 1 \amp 0 \\
+	      0 \amp 1 \\
+	      \end{bmatrix}</m> is the identity so <m>A = QDQ^T =
+	      D</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True.  In this case, <m>A</m> and <m>B</m> are similar
+	      so they have the same eigenvalues, all of which are
+	      negative.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      False
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Determine the critical points for each of the following
+	functions.  At each critical point, determine the Hessian
+	<m>H</m>, describe the definiteness of <m>H</m>, and determine
+	whether the critical point is a local maximum or minimum.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>f(x,y) = xy + \frac2x + \frac2y</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>f(x,y) = x^4 + y^4 - 4xy</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <md>
+		<mrow>
+		  f_x \amp {}={} y - \frac2{x^2} = 0
+		</mrow>
+		<mrow>
+		  f_y \amp {}={} x - \frac2{y^2} = 0
+		</mrow>
+		so <m>x^2y=2</m> and <m>xy^2=2</m>.  Therefore,
+		<m>xy(x-y)=0</m> so <m>x=y=\sqrt[3]{2}</m>.
+	      </md>
+	    </p>
+	    <p>
+	      Also, <m>f_{xx} = \frac4{x^3}</m>, <m>f_{xy} = 1</m>,
+	      and <m>f_{yy} = \frac4{y^3}</m> so that the Hessian
+	      matrix is
+	      <m>\begin{bmatrix} 1/2 \amp 1 \\
+	      1 \amp 1/2 \end{bmatrix}</m>.  The eigenvalues are
+	      <m>-1/2</m> and <m>3/2</m> so this matrix is indefinite
+	      and the critical point is neither a local maximum nor
+	      minimum.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <md>
+		<mrow>
+		  f_x \amp {}={} 4x^3 - 4y = 0
+		</mrow>
+		<mrow>
+		  f_y \amp {}={} 4y^3 - 4x = 0
+		</mrow>
+	      </md>
+	      so <m>x=y^3</m> and <m>y=x^3</m>.  Therefore,
+	      <m>x=x^9</m> so <m>x=y=0</m>, <m>1</m>, or <m>-1</m>. 
+	    </p>
+	    <p>
+	      Also, <m>f_{xx} = 12{x^2}</m>, <m>f_{xy} = -4</m>,
+	      and <m>f_{yy} = 12{y^2}</m> so that the Hessian
+	      matrix is
+	      <m>\begin{bmatrix} 12x^2 \amp -4 \\
+	      -4 \amp 12y^2 \end{bmatrix}</m>.
+	    </p>
+
+	    <p>
+	      At <m>(0,0)</m>, the Hessian is indefinite so this
+	      critical point is neither a local maximum nor minimum.
+	      At both <m>(1,1)</m> and <m>(-1,-1)</m>, it is positive
+	      definite so the critical points are local minima.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>(\sqrt[3]{2}, \sqrt[3]{2})</m> is neither a local
+	      maximum nor minimum.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>(0,0)</m> is neither a local maximum nor minimum.
+	      Both <m>(1,1)</m> and <m>(-1,-1)</m> are local minima.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the function <m>f(x,y,z) = x^4 + y^4 +z^4 -
+	4xyz</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Show that <m>f</m> has a critical point at
+	      <m>(-1,1,-1)</m> and construct the Hessian <m>H</m> at
+	      that point.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the eigenvalues of <m>H</m>.  Is this a definite
+	      matrix of some kind?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What does this imply about whether <m>(-1,1,-1)</m> is a
+	      local maximum or minimum?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <md>
+		<mrow>
+		  f_x \amp {}={} 4x^3 - 4yz = 0
+		</mrow>
+		<mrow>
+		  f_y \amp {}={} 4y^3 - 4xz = 0
+		</mrow>
+		<mrow>
+		  f_z \amp {}={} 4z^3 - 4xy = 0
+		</mrow>
+	      </md>
+	      and all three equations are satisfied at the point
+	      <m>(-1,1,-1)</m>.
+	    </p>
+	    <p>
+	      The Hessian matrix at that point is
+	      <m>H=\begin{bmatrix}
+	      12 \amp 4 \amp -4 \\
+	      4 \amp 12 \amp 4 \\
+	      -4 \amp 4 \amp 12
+	      \end{bmatrix} </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The eigenvalues are <m>4</m>, <m>16</m>, and <m>16</m> so
+	      <m>H</m> is positive definite
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      This implies that the critical point is a local minimum.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The Hessian matrix at that point is
+	      <m>H=\begin{bmatrix}
+	      12 \amp 4 \amp -4 \\
+	      4 \amp 12 \amp 4 \\
+	      -4 \amp 4 \amp 12
+	      \end{bmatrix} </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>H</m> is positive definite.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The critical point is a local minimum.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+</exercises>
+

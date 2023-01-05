@@ -1,0 +1,10 @@
+**/.DS_Store
+output
+schemas.xml
+*.tex
+*.swp
+generated-assets/webwork
+.error_schema.log
+cli.log
+
+Makefile.paths

@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that
+	<me>
+	  \wvec_1=\threevec111,\hspace{24pt}
+	  \wvec_2=\threevec1{-2}1.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Verify that <m>\wvec_1</m> and <m>\wvec_2</m> form an
+	      orthogonal basis for a plane <m>W</m> in <m>\real^3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Use <xref ref="prop-proj-formula" /> to find
+	      <m>\bhat</m>, the orthogonal projection of
+	      <m>\bvec=\threevec21{-1}</m> onto <m>W</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find an orthonormal basis <m>\uvec_1</m>, <m>\uvec_2</m>
+	      for <m>W</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the matrix <m>P</m> representing the matrix
+	      transformation that projects vectors in <m>\real^3</m>
+	      orthogonally onto <m>W</m>.  Verify that <m>\bhat =
+	      P\bvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Determine <m>\rank(P)</m> and explain its geometric
+	      significance.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Check that <m>\wvec_1\cdot\wvec_2=0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Applying the Projection Formula gives <m>\bhat =
+	      \threevec{1/2}1{1/2}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\uvec_1=\frac{1}{\len{\wvec_1}}\wvec_1 =
+	      \threevec{1/\sqrt{3}}{1/\sqrt{3}}{1/\sqrt{3}}</m>
+	      and
+	      <m>\uvec_2=\frac{1}{\len{\wvec_2}}\wvec_2 =
+	      \threevec{1/\sqrt{6}}{-2/\sqrt{6}}{1/\sqrt{6}}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Form <m>Q=\begin{bmatrix}\uvec_1 \amp \uvec_2
+	      \end{bmatrix}</m> so that <m>P=QQ^T=\begin{bmatrix}
+	      1/2 \amp 0 \amp 1/2 \\
+	      0 \amp 1 \amp 0 \\
+	      1/2 \amp 0 \amp 1/2
+	      \end{bmatrix}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Since <m>\col(P)=W</m>, we have
+	      <m>\rank(P) = 2</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+	    
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\wvec_1\cdot\wvec_2=0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bhat =
+	      \threevec{1/2}1{1/2}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\uvec_1=\frac{1}{\len{\wvec_1}}\wvec_1 =
+	      \threevec{1/\sqrt{3}}{1/\sqrt{3}}{1/\sqrt{3}}</m>
+	      and
+	      <m>\uvec_2=\frac{1}{\len{\wvec_2}}\wvec_2 =
+	      \threevec{1/\sqrt{6}}{-2/\sqrt{6}}{1/\sqrt{6}}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>P=\begin{bmatrix}
+	      1/2 \amp 0 \amp 1/2 \\
+	      0 \amp 1 \amp 0 \\
+	      1/2 \amp 0 \amp 1/2
+	      \end{bmatrix}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\rank(P) = 2</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	    
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the vectors
+	<me>
+	  \wvec_1=\threevec111,\hspace{24pt}
+	  \wvec_2=\threevec{-1}01,\hspace{24pt}
+	  \wvec_3=\threevec1{-2}1.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Explain why these vectors form an orthogonal basis for
+	      <m>\real^3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Suppose that
+	      <m>A=\begin{bmatrix} \wvec_1 \amp \wvec_2 \amp \wvec_3
+	      \end{bmatrix}</m> and evaluate the product <m>A^TA</m>.
+	      Why is this product a diagonal matrix and what is the
+	      significance of the diagonal entries?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Express the vector <m>\bvec=\threevec{-3}{-6}3</m> as a
+	      linear combination of <m>\wvec_1</m>, <m>\wvec_2</m>,
+	      and <m>\wvec_3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Multiply the vectors <m>\wvec_1</m>, <m>\wvec_2</m>,
+	      <m>\wvec_3</m> by appropriate scalars to find an
+	      orthonormal basis <m>\uvec_1</m>, <m>\uvec_2</m>,
+	      <m>\uvec_3</m> of <m>\real^3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>Q=\begin{bmatrix} \uvec_1 \amp \uvec_2 \amp
+	      \uvec_3
+	      \end{bmatrix}</m>, find the matrix product <m>QQ^T</m>
+	      and explain the result.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Check that all three dot products
+	      <m>\wvec_1\cdot\wvec_1=0</m>, 
+	      <m>\wvec_1\cdot\wvec_3=0</m>, and
+	      <m>\wvec_2\cdot\wvec_3=0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^TA = \begin{bmatrix}
+	      3 \amp 0 \amp 0 \\
+	      0 \amp 2 \amp 0 \\
+	      0 \amp 0 \amp 6
+	      \end{bmatrix}
+	      =
+	      \begin{bmatrix}
+	      \wvec_1\cdot\wvec_1\amp \wvec_1\cdot\wvec_2\amp
+	      	      \wvec_1\cdot\wvec_3 \\
+		      \wvec_2\cdot\wvec_1\amp \wvec_2\cdot\wvec_2\amp
+	      	      \wvec_2\cdot\wvec_3 \\
+	      \wvec_3\cdot\wvec_1\amp \wvec_3\cdot\wvec_2\amp
+	      \wvec_3\cdot\wvec_3 \\
+	      \end{bmatrix}
+	      </m>.  This matrix is diagonal because the vectors form
+	      an orthogonal set.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We may find the weights of this linear combination by
+	      finding
+	      <m>c_i=\frac{b\cdot\wvec_i}{\wvec_i\cdot\wvec_i}</m> so
+	      that 
+	      <m>\bvec=-2\wvec_1+3\wvec_2+2\wvec_3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <me>
+		\uvec_1=\threevec{1/\sqrt{3}}{1/\sqrt{3}}
+		{1/\sqrt{3}},\hspace{24pt}
+		\uvec_2=\threevec{-1/\sqrt{2}}0{1/\sqrt{2}},
+		\hspace{24pt}
+		\uvec_3=\threevec{1/\sqrt{6}}{-2/\sqrt{6}}
+		{1/\sqrt{6}},\hspace{24pt}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The columns of <m>Q</m> form an orthonormal basis for
+	      <m>\real^3</m> so <m>Q</m> is orthogonal.  Therefore,
+	      <m>QQ^T=I</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\wvec_1\cdot\wvec_1=0</m>, 
+	      <m>\wvec_1\cdot\wvec_3=0</m>, and
+	      <m>\wvec_2\cdot\wvec_3=0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>A^TA = \begin{bmatrix}
+	      3 \amp 0 \amp 0 \\
+	      0 \amp 2 \amp 0 \\
+	      0 \amp 0 \amp 6
+	      \end{bmatrix}
+	      </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bvec=-2\wvec_1+3\wvec_2+2\wvec_3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <me>
+		\uvec_1=\threevec{1/\sqrt{3}}{1/\sqrt{3}}
+		{1/\sqrt{3}},\hspace{24pt}
+		\uvec_2=\threevec{-1/\sqrt{2}}0{1/\sqrt{2}},
+		\hspace{24pt}
+		\uvec_3=\threevec{1/\sqrt{6}}{-2/\sqrt{6}}
+		{1/\sqrt{6}},\hspace{24pt}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>QQ^T=I</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that
+	<me>
+	  \wvec_1=\fourvec110{-1}, \hspace{24pt}
+	  \wvec_2=\fourvec1011
+	</me>
+	form an orthogonal basis for a subspace <m>W</m> of
+	<m>\real^4</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find <m>\bhat</m>, the orthogonal projection of
+	      <m>\bvec=\fourvec{2}{-1}{-6}{7}</m> onto <m>W</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the vector <m>\bvec^\perp</m> in <m>W^\perp</m>
+	      such that <m>\bvec = \bhat + \bvec^\perp</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find a basis for <m>W^\perp</m>.
+	      and
+	      express <m>\bvec^\perp</m> as a linear combination of
+	      the basis vectors.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Apply the Projection Formula to find
+	      <m>\bhat = \fourvec{-1}{-2}13</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bvec^\perp = \fourvec{3}{1}{-7}4</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Constructing a matrix <m>A</m> whose columns are
+	      <m>\wvec_1</m> and <m>\wvec_2</m> allows us to find a
+	      basis for <m>W^\perp=\nul(A^T)</m>.  This gives the
+	      basis <m>\vvec_1=\fourvec{-1}110</m> and
+	      <m>\vvec_2=\fourvec{-1}201</m>.  We then have
+	      <m>\bvec^\perp = -7\vvec_1 + 4\vvec_2</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\bhat = \fourvec{-1}{-2}13</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bvec^\perp = \fourvec{3}{1}{-7}4</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      A basis for <m>W^\perp</m> is
+	      <m>\vvec_1=\fourvec{-1}110</m> and
+	      <m>\vvec_2=\fourvec{-1}201</m>.  We then have
+	      <m>\bvec^\perp = -7\vvec_1 + 4\vvec_2</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Consider the vectors
+	<me>
+	  \wvec_1=\fourvec1100,\hspace{24pt}
+	  \wvec_2=\fourvec0011,\hspace{24pt}
+	  \bvec=\fourvec2{-4}13.
+	</me>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If <m>L</m> is the line defined by the
+	      vector <m>\wvec_1</m>, find the vector in <m>L</m>
+	      closest to <m>\bvec</m>.  Call this vector
+	      <m>\bhat_1</m>. 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>W</m> is the subspace spanned by <m>\wvec_1</m>
+	      and <m>\wvec_2</m>, find the vector in <m>W</m> closest
+	      to <m>\bvec</m>.  Call this vector <m>\bhat_2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Determine whether <m>\bhat_1</m> or <m>\bhat_2</m> is
+	      closer to <m>\bvec</m> and explain why.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Applying the Projection Formula gives
+	      <m>\bhat_1 = \fourvec{-1}{-1}00</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Applying the Projection Formula gives
+	      <m>\bhat_2 = \fourvec{-1}{-1}22</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bhat_2</m> is the closest vector in <m>W</m> to
+	      <m>\bvec</m>.  Since <m>L</m> is contained in <m>W</m>,
+	      <m>\bhat_1</m> cannot be closer.  Therefore,
+	      <m>\bhat_2</m> must be closer to <m>\bvec</m> than
+	      <m>\bhat_1</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\bhat_1 = \fourvec{-1}{-1}00</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bhat_2 = \fourvec{-1}{-1}22</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\bhat_2</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+	Suppose that <m>\wvec=\threevec2{-1}2</m> defines a line
+	<m>L</m> in <m>\real^3</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find the orthogonal projections of the vectors
+	      <m>\threevec100</m>, <m>\threevec010</m>,
+	      <m>\threevec001</m>
+	      onto <m>L</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Find the matrix <m>P = \frac{1}{\len{\wvec}^2} \wvec
+	      \wvec^T</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Use <xref ref="prop-linear-trans-columns" />
+	      to explain why the columns of <m>P</m> are related to the
+	      orthogonal projections you found in the first part of
+	      this exericse.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Applying the Projection Formula gives the projections
+	      <me>
+		\threevec{4/9}{-2/9}{4/9},\hspace{24pt}
+		\threevec{-2/9}{1/9}{4/9},\hspace{24pt}
+		\threevec{4/9}{-2/9}{4/9}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>P=\begin{bmatrix}
+	      4/9 \amp -2/9 \amp 4/9\\
+	      -2/9 \amp 1/9 \amp -2/9\\
+	      4/9 \amp -2/9 \amp 4/9\\
+		\end{bmatrix}
+	      </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\uvec = \frac{1}{\len{\wvec}}\wvec</m>, then
+	      <m>P=\uvec\uvec^T</m>, which projects vectors
+	      orthogonally onto <m>L</m>.  The columns of <m>P</m> are
+	      the results of projecting the standard basis vectors
+	      onto <m>L</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <me>
+		\threevec{4/9}{-2/9}{4/9},\hspace{24pt}
+		\threevec{-2/9}{1/9}{4/9},\hspace{24pt}
+		\threevec{4/9}{-2/9}{4/9}
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>P=\begin{bmatrix}
+	      4/9 \amp -2/9 \amp 4/9\\
+	      -2/9 \amp 1/9 \amp -2/9\\
+	      4/9 \amp -2/9 \amp 4/9\\
+	      \end{bmatrix}
+	      </m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The columns of <m>P</m> are
+	      the results of projecting the standard basis vectors
+	      onto <m>L</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that
+	<me>
+	  \vvec_1=\threevec103,\hspace{24pt}
+	  \vvec_2=\threevec222
+	</me>
+	form the basis for a plane <m>W</m> in <m>\real^3</m>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find a basis for the line that is the orthogonal complement
+	      <m>W^\perp</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Given the vector <m>\bvec=\threevec6{-6}2</m>, find
+	      <m>\yvec</m>, the
+	      orthogonal projection of <m>\bvec</m> onto the line
+	      <m>W^\perp</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Explain why the vector <m>\zvec = \bvec-\yvec</m> must
+	      be in 
+	      <m>W</m> and write <m>\zvec</m> as a linear combination
+	      of <m>\vvec_1</m> and <m>\vvec_2</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      A basis vector is <m>\threevec{-3}21</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\yvec = \threevec6{-4}{-2}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\yvec</m> is the orthogonal projection of <m>\bvec</m>
+	      onto <m>W^\perp</m> so <m>\zvec=\bvec-\yvec</m> must be
+	      orthogonal to <m>W^\perp</m>, which means that it is in
+	      <m>W</m>. We see that
+	      <m>\zvec = \threevec0{-2}4 = 2\vvec_1-\vvec_2</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>\threevec{-3}21</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\yvec = \threevec6{-4}{-2}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\zvec = \threevec0{-2}4 = 2\vvec_1-\vvec_2</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	    
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Determine whether the following statements are true or false
+	and explain your thinking.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If the columns of <m>Q</m> form an orthonormal
+	      basis for a subspace <m>W</m> and <m>\wvec</m> is a
+	      vector in <m>W</m>, then <m>QQ^T\wvec = \wvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      An orthogonal set of vectors in <m>\real^8</m> can have
+	      no more than 8 vectors.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>Q</m> is a <m>7\times5</m> matrix whose columns
+	      are orthonormal, then <m>QQ^T = I_7</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>Q</m> is a <m>7\times5</m> matrix whose columns
+	      are orthonormal, then <m>Q^TQ = I_5</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If the orthogonal projection of <m>\bvec</m>
+	      onto a subspace <m>W</m> satisfies <m>\bhat =
+	      \zerovec</m>, then <m>\bvec</m> is in <m>W^\perp</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <ol marker="a.">
+	<li>
+	  <p>
+	    True, because <m>\wvec</m> is the closest vector in
+	    <m>W</m> to <m>\wvec</m>.  Therefore, <m>\widehat{\wvec} =
+	    QQ^T\wvec = \wvec</m>.
+	  </p>
+	</li>
+	<li>
+	  <p>
+	    True, because the orthogonal set of vectors is linearly
+	    independent.
+	  </p>
+	</li>
+	<li>
+	  <p>
+	    False, <m>QQ^T</m> projects vectors orthogonally onto
+	    the 5-dimensional subspace <m>\col(A)</m>.
+	  </p>
+	</li>
+	<li>
+	  <p>
+	    True, because <m>Q^TQ</m> computes the dot products
+	    between the columns of <m>Q</m>
+	  </p>
+	</li>
+	<li>
+	  <p>
+	    True, because <m>\bvec=\bhat+\bvec^\perp =
+	    \bvec^\perp</m>.  Therefore, <m>\bvec</m> is in
+	    <m>W^\perp</m>.
+	  </p>
+	</li>
+      </ol>
+    </solution>
+
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that <m>Q</m> is an orthogonal matrix.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Remembering that <m>\vvec\cdot\wvec=\vvec^T\wvec</m>,
+	      explain why 
+	      <me>
+		Q\xvec\cdot(Q\yvec) = \xvec\cdot\yvec.
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Explain why
+	      <m>\len{Q\xvec} = \len{\xvec}</m>.
+	    </p>
+
+	    <p>
+	      This means that the
+	      length of a vector is unchanged after multiplying by an
+	      orthogonal matrix.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\lambda</m> is a real eigenvalue of <m>Q</m>, explain
+	      why <m>\lambda=\pm1</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>Q\xvec\cdot(Q\yvec) = (Q\xvec)^T\cdot(Q\yvec) =
+	      \xvec^TQ^TQ\yvec = \xvec^T\yvec=\xvec\cdot\yvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\len{Q\xvec}^2 = (Q\xvec)\cdot(Q\xvec) =
+	      \xvec\cdot\xvec = \len{\xvec}^2</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>Q\vvec = \lambda\vvec</m>, then <m>\len{Q\vvec} =
+	      |\lambda|\len{\vvec}=\len{\vvec}</m> so
+	      <m>|\lambda|=1</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>Q\xvec\cdot(Q\yvec) = (Q\xvec)^T\cdot(Q\yvec) =
+	      \xvec^TQ^TQ\yvec = \xvec^T\yvec=\xvec\cdot\yvec</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\len{Q\xvec}^2 = (Q\xvec)\cdot(Q\xvec) =
+	      \xvec\cdot\xvec = \len{\xvec}^2</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>Q\vvec = \lambda\vvec</m>, then <m>\len{Q\vvec} =
+	      |\lambda|\len{\vvec}=\len{\vvec}</m> so
+	      <m>|\lambda|=1</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	      
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Explain why the following statements are true.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If <m>Q</m> is an orthogonal matrix, then <m>\det Q =
+	      \pm 1</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>Q</m> is a <m>8\times 4</m> matrix whose columns
+	      are orthonormal, then <m>QQ^T</m> is an <m>8\times8</m>
+	      matrix whose rank is 4.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\bhat</m> is the orthogonal projection of
+	      <m>\bvec</m> onto a subspace <m>W</m>, then
+	      <m>\bvec-\bhat</m> is the orthogonal projection of
+	      <m>\bvec</m> onto <m>W^\perp</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Since <m>Q^TQ=I</m>, we have
+	      <m>\det(Q^TQ)=\det(Q^T)\det(Q)=(\det(Q))^2 = \det(I) =
+	      1</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The columns of <m>Q</m> form an orthonormal basis for
+	      <m>W</m>, a 4-dimensional subspace of <m>\real^8</m>.
+	      Therefore, <m>QQ^T</m> projects vectors orthogonally
+	      onto <m>W</m> so <m>\col(QQ^T)=W</m> and
+	      <m>\rank(QQ^T)=4</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\bvec^\perp=\bvec-\bhat</m>, then <m>\bvec-\bperp
+	      = \bhat</m> is in <m>W</m>, the orthogonal complement of
+	      <m>W^\perp</m>.  This means that <m>\bperp</m> is the
+	      orthogonal projection of <m>\bvec</m> onto
+	      <m>W^\perp</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+	    
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Since <m>Q^TQ=I</m>, we have
+	      <m>\det(Q^TQ)=\det(I)=1</m>. 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The four columns of <m>Q</m> form a basis for the 
+	      column space <m>\col(QQ^T)</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\bvec^\perp=\bvec-\bhat</m>, then <m>\bvec-\bperp
+	      = \bhat</m> is in <m>W</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	    
+  </exercise>
+      
+
+  <exercise>
+    <statement>
+      <p>
+	This exercise is about <m>2\times2</m> orthogonal matrices.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      In <xref ref="sec-transforms-geom" />, we saw that the
+	      matrix
+	      <m>\begin{bmatrix}
+	      \cos\theta \amp -\sin\theta \\
+	      \sin\theta \amp \cos\theta
+	      \end{bmatrix}
+	      </m>
+	      represents a rotation by an angle <m>\theta</m>.
+	      Explain why this matrix is an orthogonal matrix.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We also saw that the
+	      matrix
+	      <m>\begin{bmatrix}
+	      \cos\theta \amp \sin\theta \\
+	      \sin\theta \amp -\cos\theta
+	      \end{bmatrix}
+	      </m>
+	      represents a reflection in a line.
+	      Explain why this matrix is an orthogonal matrix.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Suppose that
+	      <m>\uvec_1=\twovec{\cos\theta}{\sin\theta}</m> is a
+	      2-dimensional unit 
+	      vector.  Use a sketch to indicate all the possible
+	      vectors <m>\uvec_2</m> such that <m>\uvec_1</m> and
+	      <m>\uvec_2</m> form an orthonormal basis of
+	      <m>\real^2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Explain why every <m>2\times2</m> orthogonal matrix is
+	      either a rotation or a reflection.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If this matrix is <m>Q</m>, we have <m>Q^TQ=I</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If this matrix is <m>Q</m>, we have <m>Q^TQ=I</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\uvec_2=\twovec{-\sin\theta}{\cos\theta}</m> or
+	      <m>\twovec{\sin\theta}{-\cos\theta}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If
+	      <m>Q=\begin{bmatrix}\uvec_1\amp\uvec_2\end{bmatrix}</m> 
+	      is an orthogonal <m>2\times2</m> matrix, then
+	      <m>\uvec_1</m> is a unit vector and has the form
+	      <m>\uvec_1=\twovec{\cos\theta}{\sin\theta}</m> for some
+	      angle <m>\theta</m>.  By the last part of this problem,
+	      there are only two choices for <m>\uvec_2</m>, one of
+	      which gives a rotation and one of which gives a
+	      reflection.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>Q^TQ=I</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>Q^TQ=I</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\uvec_2=\twovec{-\sin\theta}{\cos\theta}</m> or
+	      <m>\twovec{\sin\theta}{-\cos\theta}</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The first column of <m>Q</m> has the form
+	      <m>\uvec_1=\twovec{\cos\theta}{\sin\theta}</m>.
+	      Now apply the result of the last part of this problem.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+	      
+
+</exercises>
+

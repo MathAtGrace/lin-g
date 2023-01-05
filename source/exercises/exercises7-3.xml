@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that
+	<me>
+	  Q = \begin{bmatrix}
+	  -1/\sqrt{2} \amp 1/\sqrt{2} \\
+	  1/\sqrt{2} \amp 1/\sqrt{2} \\
+	  \end{bmatrix}, \hspace{24pt}
+	  D_1 = \begin{bmatrix}
+	  75 \amp 0 \\
+	  0 \amp 74
+	  \end{bmatrix}, \hspace{24pt}
+	  D_2 = \begin{bmatrix}
+	  100 \amp 0 \\
+	  0 \amp 1 
+	  \end{bmatrix}
+	</me>
+	and that we have two datasets, one whose covariance matrix is 
+	<m>C_1 = QD_1Q^T</m> and one whose covariance matrix is
+	<m>C_2 = QD_2Q^T</m>.
+	For each dataset, find
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      the total variance.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      the fraction of variance represented by the first
+	      principal component.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      a verbal description of how the demeaned data points
+	      appear when plotted in the plane.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      For the first dataset, the total variance is <m>75+75 =
+	      149</m> while the second dataset has a total variance of
+	      <m>100+1=101</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      In the first dataset, the first principal component
+	      represents <m>75/149=50.3\%</m> of the variance compared
+	      to <m>100/101=99.0\%</m> in the second dataset.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The points in the first dataset are scattered almost
+	      uniformly around the origin.  In the second
+	      dataset, they are clustered very close to the line
+	      defined by the vector
+	      <m>\twovec{-1/\sqrt{2}}{1/\sqrt{2}}</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m> 149</m> for the first dataset and <m>101</m> for the
+	      second
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>50.3\%</m> and <m>99.0\%</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The points in the second set are clustered very close to
+	      a line.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	  
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Suppose that a dataset has mean <m>\threevec{13}{5}{7}</m>
+	and that its associated covariance matrix is
+	<m>C=\begin{bmatrix}
+	275 \amp -206 \amp 251 \\
+	-206 \amp 320 \amp -206 \\
+	251 \amp -206 \amp 275
+	\end{bmatrix}
+	</m>.
+	<sage>
+	  <input>
+
+	  </input>
+	</sage>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      What fraction of the variance is represented by the
+	      first two principal components?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If <m>\threevec{30}{-3}{26}</m> is one of the data
+	      points, find the coordinates when the demeaned point is
+	      projected into the plane defined by the first two
+	      principal components.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If a projected data point has coordinates
+	      <m>\twovec{12}{-25}</m>, find an estimate for the original
+	      data point.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The eigenvalues are <m>732</m>, <m>114</m>, and
+	      <m>24</m> so the fraction of variance represented by the
+	      first two principal components is
+	      <m>(732+114)/(732+114+24) = 97\%</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Suppose <m>\xvec</m> is this data point and <m>\mvec</m>
+	      the vector of means.
+	      If <m>Q</m> is the <m>2\times3</m> matrix whose columns
+	      are the first two principal components, then we find
+	      <m>Q.T(\xvec-\mvec) = \twovec{25.4}{8.16}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We find <m>Q\twovec{12}{-25} + \mvec =
+	      \threevec{9.7}{-22.3}{3.7}</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+	    
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>97\%</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>\twovec{25.4}{8.16}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m> \threevec{9.7}{-22.3}{3.7}</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	    
+	      
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Evaluating the following cell loads a <m>2\times100</m>
+	demeaned data matrix <c>A</c>.
+	<sage>
+	  <input>
+sage.repl.load.load('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/pca_ex.py', globals())
+
+
+	  </input>
+	</sage>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find the principal components <m>\uvec_1</m> and
+	      <m>\uvec_2</m> and the variance in the direction of each
+	      principal component.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What is the total variance?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What can you conclude about this dataset?
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      We find that <m>\uvec_1 = \twovec{-0.45}{-0.89}</m> and
+	      <m>\uvec_2=\twovec{-0.89}{0.44}</m>.  The variances are
+	      <m>V_{\uvec_1} = 1.62</m> and <m>V_{\uvec_2} = 0</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The total variance is <m>1.62</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      All of the data lies on the line defined by
+	      <m>\uvec_1</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The variances are <m>V_{\uvec_1} = 1.62</m> and
+	      <m>V_{\uvec_2} = 0</m>. 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>1.62</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      All of the data lies on a line 
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	Determine whether the following statements are true or false
+	and explain your thinking.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      If the eigenvalues of the covariance matrix are
+	      <m>\lambda_1</m>, <m>\lambda_2</m>, and
+	      <m>\lambda_3</m>, then <m>\lambda_3</m> is the variance
+	      of the demeaned data points when projected on the third
+	      principal component <m>\uvec_3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Principal component analysis always allows us to
+	      construct 
+	      a smaller dimensional representation of a dataset
+	      without losing any information.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      If the eigenvalues of the covariance matrix are 56,
+	      32, and 0, then the demeaned data points all lie on a
+	      line in <m>\real^3</m>.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      True.  The variance of the projected data points is
+	      <m>V_{\uvec_3} = \uvec_3\cdot(C\uvec_3) =
+	      \lambda_3</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False. If we project onto a subspace that retains less
+	      than all the variance, then we are losing information
+	      about the data in the directions orthogonal to the
+	      subspace.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False.  They will lie on the plane spanned by the first
+	      two principal components.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      True
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      False
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+	In <xref ref="activity-pca-iris" />, we looked at a dataset
+	consisting of four measurements of 150 irises.  These
+	measurements are sepal length, sepal width, petal length, and
+	petal width.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find the first principal component <m>\uvec_1</m> and
+	      describe the meaning of its four components.  Which
+	      component is most significant? What can you say
+	      about the relative importance of the four
+	      measurements?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      When the dataset is plotted in the plane defined by
+	      <m>\uvec_1</m> and <m>\uvec_2</m>, the specimens from
+	      the species iris-setosa lie on the left side of the
+	      plot.  What does this tell us about how iris-setosa
+	      differs from the other two species in the four
+	      measurements? 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      In general, which species is closest to the <q>average
+	      iris</q>? 
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The first principal component is <m>\uvec_1 =
+	      \fourvec{0.36}{-0.08}{0.85}{0.36}</m>.  If we move in
+	      the <m>\uvec_1</m> direction, each component describes
+	      how we move away from the mean of that measurement.  The
+	      most important component is the third one, which
+	      corresponds to petal length, while the second component,
+	      corresponding to sepal width, is least signficant.  Of
+	      the four measurements, there is the most variance in
+	      petal length.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      To reach an Iris setosa sample, we multiply
+	      <m>\uvec_1</m> by a negative number.  This says that the
+	      petal length, the most signficant component of
+	      <m>\uvec_1</m> will be below the mean for Iris setosa.
+	      The sepal length and petal width will also be below the
+	      mean.  Basically, the Iris setosa would appear to be
+	      smaller overall.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Iris versicolor would appear to be closest to average
+	      since the points are closest to the origin in the
+	      <m>\uvec_1</m>-<m>\uvec_2</m> plane.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+	    
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The petal length is the most signficant and the sepal
+	      width is the least.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Iris setosa has a below average petal length and appears
+	      overall smaller.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Iris versicolor
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+	    
+  </exercise>
+	    
+  <exercise>
+    <statement>
+      <p>
+	This problem explores a dataset describing 333 penguins.
+	There are three species, Adelie, Chinstrap, and Gentoo, as
+	illustrated on the left of <xref ref="fig-penguins" />, as
+	well as both male and female penguins in the dataset.
+      </p>
+      
+      <figure xml:id="fig-penguins">
+	<sidebyside widths="55% 35%">
+	  <image source="images/lter_penguins.png" />
+	  <image source="images/culmen_depth.png" />
+	</sidebyside>
+	<caption>
+	  Artwork by <url
+	  href="https://github.com/allisonhorst/palmerpenguins/blob/master/README.md"
+	  visual="gvsu.edu/s/21G">
+	  @allison_horst </url>
+	</caption>
+      </figure>
+
+      <p>
+	Evaluating the next cell will load and display the data.  The
+	meaning of the culmen length and width is contained in the
+	illustration on the right of <xref ref="fig-penguins" />.
+	<sage>
+	  <input>
+sage.repl.load.load('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/pca_penguins.py', globals())
+df.T
+
+
+	  </input>
+	</sage>
+	This dataset is a bit different from others that we've looked
+	at because the scale of the measurements is significantly
+	different.  For instance, the measurements for the body mass
+	are roughly 100 times as large as those for the culmen length.
+	For this reason, we will standardize the data by first
+	demeaning it, as usual, and then rescaling each measurement by
+	the reciprocal of its standard deviation.  The result is
+	stored in the <m>4\times333</m> matrix <c>A</c>.
+	<sage>
+	  <input>
+
+	  </input>
+	</sage>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Find the covariance matrix and its eigenvalues.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What fraction of the total variance is explained by the
+	      first two principal components?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Construct the <m>2\times333</m> matrix <m>B</m> whose
+	      columns are 
+	      the coordinates of the demeaned data points projected
+	      onto the first two principal components.  
+	      The following cell will create the plot.
+	      <sage>
+		<input>
+
+pca_plot(B)		  
+
+		  
+		</input>
+	      </sage>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Examine the components of the first two principal
+	      component vectors. 
+	      How does the body mass of Gentoo penguins compare to
+	      that of the other two species?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      What seems to be generally true about the culmen
+	      measurements for a Chinstrap penguin compared to a
+	      Adelie?
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      You can plot just the males or females using the
+	      following cell.
+	      <sage>
+		<input>
+pca_plot(B, sex='female')
+
+		  
+		</input>
+	      </sage>
+	      What seems to be generally true about the body mass
+	      measurements for a male Gentoo compared to a
+	      female Gentoo?
+	    </p>
+	  </li>
+	</ol>
+
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      The eigenvalues are <m>2.7</m>, <m>0.8</m>, <m>0.4</m>,
+	      and <m>0.1</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The first two principal components retain <m>88\%</m> of
+	      the total variance.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>B=Q^TA</m> where the columns of <m>Q</m> are the
+	      first two principal components.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Gentoo penguins have a larger body mass because the
+	      fourth component, which corresponds to body mass, of
+	      <m>\uvec_1</m> is negative and the Gentoo penguins are
+	      represented by <m>c_1\uvec_1</m> where <m>c_1</m> is
+	      negative. 
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      These measurements seem larger for the Chinstrap
+	      penguins because the first two components of
+	      <m>\uvec_2</m> are positive.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The male Gentoo lie further to the left, which means
+	      they have a higher body mass.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </solution>
+
+    <answer>
+      <p>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <m>2.7</m>, <m>0.8</m>, <m>0.4</m>,
+	      <m>0.1</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>88\%</m>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      <m>B=Q^TA</m> where the columns of <m>Q</m> are the
+	      first two principal components.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Gentoo penguins have a larger body mass.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      These measurements seem larger for the Chinstrap
+	      penguins.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      The male Gentoo have a higher body mass.
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+    
+  </exercise>
+
+</exercises>
+
